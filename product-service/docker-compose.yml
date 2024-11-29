@@ -1,0 +1,16 @@
+version: "4"
+services:
+  mongodb:
+    image: mongo:7.0.5
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+       MANGO_INITDB_ROOT_USERNAME: root
+       MANGO_INITDB_ROOT_PASSWORD: password
+       MANGO_INITDB_DATABASE: microservices
+
+
+    volumes:
+      - ./data:/data/db
+
